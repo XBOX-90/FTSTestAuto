@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="FTS App Test automtion regression suite"
+	thread-count="3" parallel="tests" verbose="3">
+
+
+	<!-- To Add Listeners in testNG xml -->
+
+	<listeners>
+		<listener
+			class-name="com.qa.fts.listeners.ExtentReportListener" />
+		<listener class-name="com.qa.fts.listeners.TestAllureListener" />
+	</listeners>
+
+
+	<test name="Login page Test">
+		<parameter name="browser" value="chrome" />
+		<!-- <parameter name="browserversion" value="83" /> -->
+		<classes>
+			<class name="com.qa.fts.tests.LoginPageTest" />
+		</classes>
+	</test>
+	<test name="DashBoard page Test">
+	<parameter name="browser" value="chrome" />
+	<!-- <parameter name="browserversion" value="89" /> -->
+	<classes>
+		<class name="com.qa.fts.tests.DashBoardpageTest" />
+	</classes>
+</test>
+
+
+	<test name="Registration page Test">
+		<parameter name="browser" value="firefox" />
+		<!-- <parameter name="browserversion" value="89" /> -->
+		<classes>
+			<class name="com.qa.fts.tests.NewUserRegistrationTest" />
+		</classes>
+	</test>
+
+	<!-- <test name="ProductInfo page Test"> <parameter name="browser" value="chrome" 
+		/> <parameter name="browserversion" value="57" /> <classes> <class name="com.qa.opencart.tests.ProductInfoTest" 
+		/> </classes> </test> -->
+
+	<!-- <test name="Login page Test_ff"> <parameter name="browser" value="firefox" 
+		/> <parameter name="browserversion" value="83" /> <classes> <class name="com.qa.opencart.tests.LoginPageTest" 
+		/> </classes> </test> <test name="Login page Test_chrome"> <parameter name="browser" 
+		value="chrome" /> <parameter name="browserversion" value="90" /> <classes> 
+		<class name="com.qa.opencart.tests.LoginPageTest" /> </classes> </test> <test 
+		name="Accounts page Test"> <parameter name="browser" value="chrome" /> <parameter 
+		name="browserversion" value="89" /> <classes> <class name="com.qa.opencart.tests.AccountsPageTest" 
+		/> </classes> </test> <test name="ProductInfo page Test"> <parameter name="browser" 
+		value="firefox" /> <parameter name="browserversion" value="57" /> <classes> 
+		<class name="com.qa.opencart.tests.ProductInfoTest" /> </classes> </test> -->
+
+
+
+
+</suite>
